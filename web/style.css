@@ -1,0 +1,77 @@
+body {
+    background-color: #0d2437;
+    font-family: 'Kode-Mono', monospace;
+}
+
+.header {
+    color: white;
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1 {
+    grid-column: 2;
+    margin: auto;
+    font-size: 40px;
+    text-align: center;
+}
+
+.settings-button {
+    justify-self: end;
+    padding: 10%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.settings-button img {
+      width: 35px;
+      height: 35px;
+}
+
+.divider {
+    border-top: 3px solid #bbb;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container#blur.active {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#menu {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 30%;
+    padding: 50px;
+    box-shadow: 0 5px 30px rgba(0,0,0,.30);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#menu.active {
+    top: 40%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.keyboard {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
